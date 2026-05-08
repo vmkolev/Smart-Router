@@ -1,1 +1,5 @@
+#!/usr/sbin/nft -f
+
+flush ruleset
+
 include "/tmp/nft_vars.nft"

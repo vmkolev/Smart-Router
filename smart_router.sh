@@ -1,4 +1,20 @@
 #!/bin/bash
+###############################################################################
+#  ____                      _     ____             _            
+# / ___| _ __ ___   __ _ _ __| |_  |  _ \ ___  _   _| |_ ___ _ __ 
+# \___ \| '_ ` _ \ / _` | '__| __| | |_) / _ \| | | | __/ _ \ '__|
+#  ___) | | | | | | (_| | |  | |_  |  _ < (_) | |_| | ||  __/ |   
+# |____/|_| |_| |_|\__,_|_|   \__| |_| \_\___/ \__,_|\__\___|_|   
+#
+# Name: smart_router.sh
+# Developed for: ThinkPad X201 / Debian-based systems
+# Repository: https://github.com/vmkolev/smart-router
+# License: MIT
+# 
+# Last Modified: 2026-05-08
+# Version: 1.0.0 (2026)
+###############################################################################
+
 
 # ===== VARIABLES =====
 
@@ -106,7 +122,7 @@ configure_network() {
     echo "🔌 Configuring network interfaces..."
 
     # Common steps for both modes
-    modprobe rt2800usb
+    modprobe "$MODULE_NAME"
     ip addr flush dev "$WIFI_IFACE" 2>/dev/null
     ip addr add "$GATEWAY_IP/24" dev "$WIFI_IFACE"
     ip link set "$WIFI_IFACE" up

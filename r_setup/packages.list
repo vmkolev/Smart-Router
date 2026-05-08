@@ -1,0 +1,14 @@
+sudo
+ca-certificates
+curl
+gnupg
+wget
+mc
+tree
+rsync
+htop
+isc-dhcp-server
+nftables
+ipcalc
+rfkill
+hostapd-utils
